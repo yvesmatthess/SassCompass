@@ -1,0 +1,136 @@
+/*@YM*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: Helvetica;
+	font-size: 101%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+        
+}
+
+:focus {/* remember to define focus styles! */
+	outline: 1px;
+}
+
+.clearfix{
+    display: block;
+}
+
+body {
+	line-height: 1;
+        padding: 0 2em;
+}
+
+
+p{
+    text-shadow: 1px 1px 2px #999;
+    padding-left: 1em;
+}
+ol, ul {
+	list-style: none;
+}
+table {/* tables still need 'cellspacing="0"' in the markup */
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin: 2em 0;       
+}
+
+table.boxshadow{
+    box-shadow: 1px 1px 2px #999;
+}
+
+caption, th, td {
+	font-weight: normal;
+        font-size:92%;
+	text-align: center;
+        }
+        
+th,td{
+    /**border: 1px solid gray;*/  
+    width: 10em;
+    padding: 0 0.3em;
+    height: 64px;
+}
+
+td{
+    vertical-align: middle;
+    
+}
+
+ td:nth-child(3), td:nth-child(4), td:nth-child(5){
+    width:4em;
+}
+
+tr:nth-child(even){
+    background-color: #eee;
+}
+tr:nth-child(odd){
+    background-color: #f5f5f5;
+}
+
+.onepxsmall{
+    width:1px;
+    padding: 0;
+}
+.icon-sprite{
+    background-image: url("images/LogoSprite-64x520.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.ktv-icon {
+    /*width: 30px;
+    height: 30px;*/
+  background-position: 50% 14%;
+    /*background-size: 300px 300px;*/}
+
+.ruhr-icon{
+    background-position: 50% 1%;
+}
+
+.ktv-icon2{
+    background-position: 50% 14%;
+}
+
+.saar-icon {
+  background-position:50% 27%;
+}
+
+.sulzbach-icon{
+    background-position: 50% 40%;
+}
+
+.hhl-icon{
+    background-position: 50% 52%;
+}
+
+.hb-icon{
+    background-position: 50% 67%;
+}
+
+.eintracht-icon{
+    background-position: 50% 82%;
+}
+
+@media(max-width:800px){
+    
+    /**.icon-sprite{
+        background-image: none;
+    }*/
+    
+    
+}
+@media all and(orientation: portrait){
+    /*portrait styles*/
+}

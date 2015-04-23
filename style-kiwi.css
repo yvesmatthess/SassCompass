@@ -1,0 +1,28 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24.03.2015, 21:18:12
+    Author     : work
+*/
+.logo {
+  width: 200px;
+  height: 164px; }
+
+.kiwi {
+  fill: #94d31b; }
+
+.kiwi:hover {
+  fill: #ace63c; }
+
+.ground {
+  fill: #787f6a; }
+
+.ground:hover {
+  filter: url(#pictureFilter);
+  fill: #896d3d; }
+
+body {
+  padding: 20px; }
