@@ -1,0 +1,105 @@
+/* 
+    Created on : 03.06.2014, 07:18:21
+    Author     : work*/
+
+
+@import "mixins";
+@import 'variables';
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities/sprites";
+@import "my-icons/*.png" ;
+@include all-my-icons-sprites;
+
+ @mixin vendorize($property, $value) {
+	-webkit-#{$property}: $value;
+	-moz-#{$property}: $value;
+	-ms-#{$property}: $value;
+	-o-#{$property}: $value;
+	#{$property}: $value;
+        border-color: black;
+        border-style: solid;
+        border-width: 2px;
+}
+
+@mixin clear() {
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin color_class($color){
+    
+    .#{$color}{
+        
+        @if $color == 'blue'{
+            background-color: red;
+        }@else{
+            background-repeat: repeat-x;
+        }
+        
+    }
+    
+}
+/**Using the name of the parent selector as a STRING**/
+.main {
+    /**CSS: .main-heading*/
+    &-heading{
+        color: $color-blue;
+        @extend %centered;
+    }
+}
+
+/** Usage of Placeholders*/
+.branding {
+    
+    font-family: Arial;
+    @extend %centered;
+}
+
+/*****   Nesting:     avoid showing selectors multiple times ******/
+section.entry{
+    
+    width: 80%;
+    height: 100px;
+    > h1{
+        color:#369;
+        padding: 2em;
+        
+    }
+
+     > p{
+        font-family: Georgia ;
+        padding: 1em;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 10px;
+        //@include vendorize(border-radius, 10px);
+        //@include color_class("blue");
+    }
+     th, td { height: 32px;
+              padding-left: 6em;
+              border: 1px solid #ccc;
+    }
+     
+}
+
+/*in the rare cases when javascript is disabled*/
+.no-js{
+    h1{
+        color: black;
+    }
+    p{
+        color: blue;
+       
+    }
+}
+
+
+
+
